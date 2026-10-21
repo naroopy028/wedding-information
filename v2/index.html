@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結婚式・披露宴のご案内</title>
+  
+  <!-- Google Fonts: Cormorant Garamond, Shippori Mincho, Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Material Symbols Outlined -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <style>
+    /* 
+      ウエディングコンセプトカラー
+      ネイビー: #0C1A2E
+      シャンパンゴールド: #C5A059
+      ボルドーレッド: #6B1D2F
+      パープル: #4A2E5D
+      ベース background: #FAF9F5 (暖かみのあるアイボリー)
+    */
+    :root {
+      --color-bg: #FAF9F5;
+      --color-card-bg: #FFFFFF;
+      --color-navy: #0C1A2E;
+      --color-gold: #C5A059;
+      --color-gold-light: #E8DCC4;
+      --color-bordeaux: #6B1D2F;
+      --color-purple: #4A2E5D;
+      --color-text-main: #1A1A1A;
+      --color-text-sub: #555555;
+      --color-border: #E5DFC8;
+
+      --font-en: 'Cormorant Garamond', serif;
+      --font-ja-serif: 'Shippori Mincho', serif;
+      --font-ja-sans: 'Noto Sans JP', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      font-family: var(--font-ja-sans);
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 12px 60px;
+    }
+
+    /* 全体コンテナ - レター・ペーパーアイテム風枠線 */
+    .wedding-container {
+      max-width: 680px;
+      margin: 0 auto;
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-gold);
+      padding: 12px;
+      box-shadow: 0 10px 30px rgba(12, 26, 46, 0.05);
+      position: relative;
+    }
+
+    .inner-border {
+      border: 1px solid var(--color-gold-light);
+      padding: 32px 20px;
+      position: relative;
+    }
+
+    /* コーナー装飾 */
+    .inner-border::before, .inner-border::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-color: var(--color-gold);
+      border-style: solid;
+    }
+    .inner-border::before {
+      top: -1px;
+      left: -1px;
+      border-width: 2px 0 0 2px;
+    }
+    .inner-border::after {
+      bottom: -1px;
+      right: -1px;
+      border-width: 0 2px 2px 0;
+    }
+
+    /* ヘッダーデザイン */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px dashed var(--color-gold-light);
+    }
+
+    .header .subtitle {
+      font-family: var(--font-en);
+      font-size: 1.25rem;
+      letter-spacing: 0.25em;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .header h1 {
+      font-family: var(--font-ja-serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--color-navy);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .divider-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 16px 0;
+      color: var(--color-gold);
+    }
+
+    .divider-ornament::before, .divider-ornament::after {
+      content: "";
+      height: 1px;
+      width: 40px;
+      background-color: var(--color-gold-light);
+    }
+
+    /* 挨拶メッセージ */
+    .intro-message {
+      font-size: 0.95rem;
+      color: var(--color-text-sub);
+      text-align: center;
+      line-height: 2;
+      margin-bottom: 32px;
+    }
+
+    /* カウントダウンバナー */
+    .countdown-card {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #172B47 100%);
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 1px solid var(--color-gold);
+      position: relative;
+    }
+
+    .countdown-card .label {
+      font-family: var(--font-en);
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: var(--color-gold-light);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .timer-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timer-num {
+      font-family: var(--font-en);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .timer-label {
+      font-size: 0.7rem;
+      color: var(--color-gold-light);
+      margin-top: 4px;
+    }
+
+    /* セクション共通 */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--color-gold-light);
+    }
+
+    .section-title .material-symbols-outlined {
+      color: var(--color-gold);
+      font-size: 22px;
+    }
+
+    .section-title h2 {
+      font-family: var(--font-ja-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      letter-spacing: 0.05em;
+    }
+
+    .section-block {
+      margin-bottom: 40px;
+    }
+
+    /* 日時・場所カード */
+    .info-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-item {
+      background-color: #FAF9F5;
+      padding: 18px 20px;
+      border-left: 3px solid var(--color-navy);
+      border-top: 1px solid var(--color-border);
+      border-right: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .info-value {
+      font-size: 0.98rem;
+      color: var(--color-navy);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .info-sub {
+      font-size: 0.85rem;
+      color: var(--color-text-sub);
+      margin-top: 4px;
+    }
+
+    /* アクションボタン（地図・FAQ） */
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      min-height: 48px; /* M3 タッチターゲット規格 */
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-sizing: border-box;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-bordeaux {
+      background-color: var(--color-bordeaux);
+      color: #FFFFFF;
+      border: 1px solid var(--color-bordeaux);
+    }
+
+    .btn-bordeaux:hover {
+      background-color: #541624;
+    }
+
+    .btn-outline-navy {
+      background-color: transparent;
+      color: var(--color-navy);
+      border: 1px solid var(--color-navy);
+    }
+
+    .btn-outline-navy:hover {
+      background-color: rgba(12, 26, 46, 0.05);
+    }
+
+    /* 当日の流れ（タイムライン） */
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+      margin-top: 16px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 7px;
+      width: 1px;
+      background-color: var(--color-gold);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 15px;
+      height: 15px;
+      background-color: #FFFFFF;
+      border: 2px solid var(--color-purple);
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    .timeline-content {
+      background-color: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 16px;
+    }
+
+    .timeline-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed var(--color-gold-light);
+      padding-bottom: 6px;
+    }
+
+    .timeline-time {
+      font-family: var(--font-en);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-bordeaux);
+    }
+
+    .timeline-title {
+      font-family: var(--font-ja-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-navy);
+    }
+
+    .timeline-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+      line-height: 1.6;
+    }
+
+    /* アクセス・交通案内リスト */
+    .access-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .access-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--color-text-main);
+      padding-bottom: 8px;
+      border-bottom: 1px solid #F0ECE1;
+    }
+
+    .access-item .material-symbols-outlined {
+      color: var(--color-gold);
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    /* 注意事項・インフォメーション */
+    .note-box {
+      background-color: #F8F6F0;
+      border: 1px solid var(--color-gold-light);
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .note-box p {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note-box .material-symbols-outlined {
+      color: var(--color-gold);
+      font-size: 18px;
+      margin-top: 2px;
+    }
+
+    /* フッター */
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-gold-light);
+    }
+
+    .footer-message {
+      font-family: var(--font-ja-serif);
+      font-size: 0.95rem;
+      color: var(--color-navy);
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+
+    .names {
+      font-family: var(--font-ja-serif);
+      font-size: 1.1rem;
+      color: var(--color-navy);
+      letter-spacing: 0.15em;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 6px 40px;
+      }
+      .inner-border {
+        padding: 24px 14px;
+      }
+      .header h1 {
+        font-size: 1.4rem;
+      }
+      .timer-num {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wedding-container">
+    <div class="inner-border">
+
+      <!-- ヘッダー -->
+      <header class="header">
+        <span class="subtitle">Wedding Information</span>
+        <h1>結婚式・披露宴のご案内</h1>
+        <div class="divider-ornament">
+          <span class="material-symbols-outlined">favorite</span>
+        </div>
+      </header>
+
+      <!-- ご挨拶 -->
+      <div class="intro-message">
+        <p>ご列席者の皆様</p>
+        <p style="margin-top: 12px;">
+          お忙しい中ご出席いただけること、本当に嬉しく思っております。<br>
+          当日安心してお越しいただけるよう、あらためて詳細をご案内いたします。<br>
+          <span style="font-size: 0.82rem; color: #888;">（※招待状からの内容の変更はございません）</span>
+        </p>
+      </div>
+
+      <!-- カウントダウン -->
+      <div class="countdown-card">
+        <div class="label">Count Down to The Special Day</div>
+        <div class="countdown-timer">
+          <div class="timer-unit">
+            <span class="timer-num" id="days">--</span>
+            <span class="timer-label">DAYS</span>
+          </div>
+          <span style="font-size: 1.5rem; color: var(--color-gold-light); font-family: var(--font-en);">:</span>
+          <div class="timer-unit">
+            <span class="timer-num" id="hours">--</span>
+            <span class="timer-label">HOURS</span>
+          </div>
+          <span style="font-size: 1.5rem; color: var(--color-gold-light); font-family: var(--font-en);">:</span>
+          <div class="timer-unit">
+            <span class="timer-num" id="mins">--</span>
+            <span class="timer-label">MINS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 日時・場所 -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">event</span>
+          <h2>日時・場所</h2>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Date & Time</span>
+            <div class="info-value">2026年10月25日（日）</div>
+            <div class="info-sub">挙式 14:00〜 ／ 披露宴 15:15〜</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <div class="info-value">ザ・プリンスパークタワー東京</div>
+            <div class="info-sub">ボールルーム</div>
+            <div class="info-sub" style="margin-top: 8px; font-size: 0.82rem;">
+              〒105-8563 東京都港区芝公園4-8-1<br>
+              TEL: 03-5400-1111
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a href="https://maps.app.goo.gl/LyjcWLynAtXxWiXVA" target="_blank" rel="noopener" class="btn btn-bordeaux">
+            <span class="material-symbols-outlined">location_on</span>
+            Google Mapsで地図を見る
+          </a>
+        </div>
+      </section>
+
+      <!-- 当日の流れ -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">schedule</span>
+          <h2>当日のスケジュール</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-time">13:40</span>
+                <span class="timeline-title">ご集合</span>
+              </div>
+              <div class="timeline-desc">
+                地下2階 ご来賓室<br>
+                <span style="font-size: 0.82rem; color: var(--color-purple);">※ホテル地下2階に降りると「臼井家・伊藤家 ご来賓室」の案内看板がございます。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-time">14:00</span>
+                <span class="timeline-title">挙式</span>
+              </div>
+              <div class="timeline-desc">
+                森のチャペル<br>
+                <span style="font-size: 0.82rem;">※ご来賓室よりスタッフがチャペルまでご案内いたします。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-time">14:30</span>
+                <span class="timeline-title">受付</span>
+              </div>
+              <div class="timeline-desc">
+                地下2階 ご来賓室
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-time">15:15</span>
+                <span class="timeline-title">披露宴</span>
+              </div>
+              <div class="timeline-desc">
+                ボールルーム（2時間半程度を予定しております）
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセス -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">directions_bus</span>
+          <h2>交通アクセス</h2>
+        </div>
+
+        <ul class="access-list">
+          <li class="access-item">
+            <span class="material-symbols-outlined">directions_walk</span>
+            <div><strong>赤羽橋駅</strong>（都営大江戸線）より徒歩2分</div>
+          </li>
+          <li class="access-item">
+            <span class="material-symbols-outlined">directions_walk</span>
+            <div><strong>芝公園駅</strong>（都営三田線）より徒歩3分</div>
+          </li>
+          <li class="access-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <div>
+              <strong>浜松町駅</strong>より徒歩12分<br>
+              <span style="font-size: 0.85rem; color: var(--color-text-sub);">※無料シャトルバスを運行しております（平常時約20分）</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="btn-group">
+          <a href="https://www.princehotels.co.jp/file.jsp?id=520229" target="_blank" rel="noopener" class="btn btn-outline-navy">
+            <span class="material-symbols-outlined">departure_board</span>
+            無料シャトルバス時刻表（PDF）
+          </a>
+        </div>
+      </section>
+
+      <!-- クローク・更衣室 -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">checkroom</span>
+          <h2>クローク・更衣室</h2>
+        </div>
+
+        <div class="note-box">
+          <p>
+            <span class="material-symbols-outlined">info</span>
+            <span><strong>クローク：</strong>地下2階にございます。お荷物やコート等をお預けいただけます。</span>
+          </p>
+          <p>
+            <span class="material-symbols-outlined">info</span>
+            <span><strong>更衣室：</strong>地下2階のお着替え室をご利用いただけます。</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 写真・SNS -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">photo_camera</span>
+          <h2>写真撮影・SNSについて</h2>
+        </div>
+
+        <div class="note-box">
+          <p>
+            <span class="material-symbols-outlined">auto_awesome</span>
+            <span>挙式中・披露宴中の写真・動画撮影は大歓迎です！</span>
+          </p>
+          <p>
+            <span class="material-symbols-outlined">send</span>
+            <span>ぜひ素敵な思い出の写真を後ほど新郎新婦までお送りいただけますと大変嬉しいです。</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 当日の連絡先 -->
+      <section class="section-block">
+        <div class="section-title">
+          <span class="material-symbols-outlined">call</span>
+          <h2>当日のご連絡先</h2>
+        </div>
+
+        <div class="info-item" style="border-left-color: var(--color-bordeaux);">
+          <div class="info-value" style="font-size: 0.92rem;">
+            道に迷われた場合や遅れそうな場合は、当日連絡係までお気軽にご連絡ください。
+          </div>
+          <div style="margin-top: 10px; font-weight: 600; color: var(--color-navy);">
+            当日連絡係：○○ 様<br>
+            <a href="tel:00000000000" style="color: var(--color-bordeaux); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px;">
+              <span class="material-symbols-outlined" style="font-size: 18px;">phone</span>
+              ○○○-○○○○-○○○○
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- よくあるご質問 & フッター -->
+      <section class="section-block" style="margin-bottom: 20px;">
+        <div class="btn-group">
+          <a href="https://www.princehotels.co.jp/parktower/wedding/faq/" target="_blank" rel="noopener" class="btn btn-outline-navy">
+            <span class="material-symbols-outlined">help_outline</span>
+            ホテルの「よくあるご質問（FAQ）」を見る
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footer-message">
+          当日はお料理やお酒を楽しみながら、<br>
+          ゆっくり過ごしてもらえたら嬉しいです。<br>
+          皆様にお会いできることを心より楽しみにしております！
+        </p>
+        <div class="divider-ornament">
+          <span class="material-symbols-outlined" style="font-size: 16px;">graphic_eq</span>
+        </div>
+        <div class="names">
+          新郎氏名 & 新婦氏名
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    // カウントダウンタイマー処理
+    function updateCountdown() {
+      const targetDate = new Date('2026-10-25T14:00:00+09:00').getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('mins').innerText = String(mins).padStart(2, '0');
+      } else {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('mins').innerText = '00';
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+
+</body>
+</html>

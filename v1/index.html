@@ -1,0 +1,400 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>10月25日 当日のご案内</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  /* Layout: 夜の宴をイメージした濃紺の見出し帯 → 淡いラベンダーグレーの本文。
+     ネイビー=土台と文字 / シャンパンゴールド=罫線と見出しの英字 / ボルドー=集合時刻など最重要点 / パープル=リンクと補助 */
+  :root {
+    --bg: #f3f1f6;
+    --surface: #fbfafd;
+    --fg: #1b2142;
+    --muted: #5b6180;
+    --line: #dcd7e6;
+    --gold: #7f622a;
+    --gold-line: #b89a5e;
+    --bordeaux: #7a2236;
+    --purple: #5b3f8c;
+    --purple-soft: #e9e3f3;
+    --btn-bg: #1b2550;
+    --btn-fg: #f1e6c6;
+    --hero-bg: #161c42;
+    --hero-glow: #3a2a6b;
+    --hero-fg: #f3eee0;
+    --hero-gold: #dcc48c;
+    --ph-bg: #f6dde2;
+    --ph-fg: #5a1526;
+    --font-jp-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --font-en: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1127;
+      --surface: #171b38;
+      --fg: #e8e5f0;
+      --muted: #9ea3c0;
+      --line: #2a2f55;
+      --gold: #d9c28f;
+      --gold-line: #8f7a4c;
+      --bordeaux: #e27e92;
+      --purple: #b49be0;
+      --purple-soft: #231e45;
+      --btn-bg: #d9c28f;
+      --btn-fg: #14183a;
+      --hero-bg: #0a0d22;
+      --hero-glow: #2b2058;
+      --hero-fg: #f3eee0;
+      --hero-gold: #d9c28f;
+      --ph-bg: #4a2030;
+      --ph-fg: #f5c9d3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1127;
+    --surface: #171b38;
+    --fg: #e8e5f0;
+    --muted: #9ea3c0;
+    --line: #2a2f55;
+    --gold: #d9c28f;
+    --gold-line: #8f7a4c;
+    --bordeaux: #e27e92;
+    --purple: #b49be0;
+    --purple-soft: #231e45;
+    --btn-bg: #d9c28f;
+    --btn-fg: #14183a;
+    --hero-bg: #0a0d22;
+    --hero-glow: #2b2058;
+    --hero-fg: #f3eee0;
+    --hero-gold: #d9c28f;
+    --ph-bg: #4a2030;
+    --ph-fg: #f5c9d3;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.95;
+    letter-spacing: 0.03em;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--purple); text-underline-offset: 4px; overflow-wrap: anywhere; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--bordeaux); outline-offset: 3px; border-radius: 2px; }
+  p { margin: 0 0 10px; }
+  .num { font-family: var(--font-en); font-variant-numeric: lining-nums tabular-nums; font-feature-settings: "lnum" 1, "tnum" 1; }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  /* ---------- ornament ---------- */
+  .orn { display: flex; align-items: center; gap: 12px; color: var(--hero-gold); }
+  .orn::before, .orn::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold-line)); }
+  .orn::after { background: linear-gradient(270deg, transparent, var(--gold-line)); }
+  .orn i { width: 7px; height: 7px; border: 1px solid var(--gold-line); transform: rotate(45deg); flex: none; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background: radial-gradient(120% 100% at 90% 0%, var(--hero-glow) 0%, transparent 62%), var(--hero-bg);
+    color: var(--hero-fg);
+    border-bottom: 1px solid var(--gold-line);
+  }
+  .hero .wrap { padding-block: 44px 40px; text-align: center; }
+  .eyebrow { font-family: var(--font-en); font-style: italic; font-size: 20px; letter-spacing: 0.08em; color: var(--hero-gold); margin: 0 0 14px; }
+  .hero h1 {
+    font-family: var(--font-jp-display);
+    font-weight: 600;
+    font-size: clamp(26px, 7.4vw, 36px);
+    line-height: 1.45;
+    letter-spacing: 0.12em;
+    margin: 0 0 22px;
+    text-wrap: balance;
+  }
+  .hero .orn { max-width: 320px; margin: 0 auto 22px; }
+  .hero .day { font-family: var(--font-jp-display); font-size: 20px; letter-spacing: 0.1em; margin: 0 0 18px; }
+  .hero-times { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 40px; margin: 0 0 24px; padding: 0; list-style: none; }
+  .hero-times li { display: flex; flex-direction: column; align-items: center; line-height: 1.3; }
+  .hero-times .k { font-family: var(--font-en); font-style: italic; font-size: 15px; color: var(--hero-gold); letter-spacing: 0.08em; }
+  .hero-times .v { font-size: 40px; font-weight: 500; }
+  .hero .venue { margin: 0; font-size: 15px; line-height: 1.8; }
+  .hero .venue strong { font-family: var(--font-jp-display); font-weight: 600; display: block; font-size: 18px; letter-spacing: 0.08em; }
+
+  /* ---------- greeting ---------- */
+  .greeting { padding-block: 36px 4px; }
+  .greeting .lead { font-family: var(--font-jp-display); font-size: 19px; font-weight: 600; letter-spacing: 0.08em; line-height: 1.8; }
+
+  /* ---------- gather ---------- */
+  .gather {
+    position: relative;
+    margin-top: 24px;
+    background: var(--surface);
+    border: 1px solid var(--gold-line);
+    border-radius: 3px;
+    padding: 22px 20px 20px;
+    text-align: center;
+  }
+  .gather::before { content: ""; position: absolute; inset: 5px; border: 1px solid var(--line); border-radius: 2px; pointer-events: none; }
+  .gather .label { font-family: var(--font-en); font-style: italic; font-size: 17px; color: var(--gold); letter-spacing: 0.08em; margin: 0; line-height: 1.5; }
+  .gather .big { font-size: 60px; font-weight: 500; line-height: 1.15; margin: 0; color: var(--bordeaux); }
+  .gather .place { font-family: var(--font-jp-display); font-weight: 700; font-size: 19px; letter-spacing: 0.1em; margin: 2px 0 10px; }
+  .gather p.note { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.85; }
+
+  /* ---------- sections ---------- */
+  section { padding-block: 40px 0; }
+  .sec-en { font-family: var(--font-en); font-style: italic; font-size: 17px; letter-spacing: 0.08em; color: var(--gold); margin: 0; line-height: 1.4; }
+  h2 {
+    font-family: var(--font-jp-display);
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    color: var(--fg);
+    background: linear-gradient(90deg, var(--gold-line) 0, var(--gold-line) 40px, var(--line) 40px) bottom / 100% 1px no-repeat;
+  }
+  .muted { color: var(--muted); font-size: 14px; }
+
+  dl.facts { margin: 0; display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: 12px 14px; }
+  dl.facts dt { color: var(--gold); font-size: 14px; padding-top: 2px; letter-spacing: 0.08em; }
+  dl.facts dd { margin: 0; min-width: 0; }
+  .tel { font-family: var(--font-en); font-size: 20px; font-weight: 600; white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
+
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 46px; padding: 8px 20px;
+    border: 1px solid var(--gold-line); border-radius: 2px;
+    background: transparent; color: var(--fg);
+    font: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.08em; text-decoration: none; cursor: pointer;
+  }
+  .btn.primary { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); }
+  .btn:hover { background: var(--purple-soft); }
+  .btn.primary:hover { background: var(--btn-bg); filter: brightness(1.15); }
+
+  /* ---------- timeline ---------- */
+  ol.flow { list-style: none; margin: 0; padding: 0; }
+  ol.flow li {
+    display: grid; grid-template-columns: 4.2em minmax(0, 1fr); gap: 0 14px;
+    position: relative; padding-bottom: 26px;
+  }
+  ol.flow li:last-child { padding-bottom: 0; }
+  ol.flow li::before {
+    content: ""; position: absolute; left: calc(4.2em + 7px - 0.5px); top: 18px; bottom: -6px;
+    width: 1px; background: var(--gold-line); opacity: 0.7;
+  }
+  ol.flow li:last-child::before { display: none; }
+  ol.flow li::after {
+    content: ""; position: absolute; left: calc(4.2em + 7px - 5px); top: 13px;
+    width: 10px; height: 10px; transform: rotate(45deg);
+    background: var(--bg); border: 1px solid var(--gold-line);
+  }
+  ol.flow li.first::after { background: var(--bordeaux); border-color: var(--bordeaux); }
+  .time { font-size: 27px; font-weight: 500; line-height: 1.5; text-align: right; }
+  ol.flow li.first .time { color: var(--bordeaux); }
+  .flow-body { padding-left: 22px; min-width: 0; }
+  .flow-body h3 { margin: 0; font-family: var(--font-jp-display); font-size: 18px; line-height: 1.75; font-weight: 700; letter-spacing: 0.08em; }
+  .flow-body p { margin: 2px 0 0; font-size: 14.5px; color: var(--muted); line-height: 1.8; }
+
+  /* ---------- access ---------- */
+  ul.stations { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); }
+  ul.stations li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 4px; }
+  ul.stations li + li { border-top: 1px solid var(--line); }
+  ul.stations .name { font-family: var(--font-jp-display); font-weight: 700; font-size: 17px; letter-spacing: 0.08em; }
+  ul.stations .walk { white-space: nowrap; font-size: 15px; color: var(--muted); }
+  ul.stations .walk b { font-family: var(--font-en); font-size: 30px; font-weight: 500; color: var(--fg); margin: 0 2px 0 8px; font-variant-numeric: lining-nums; }
+  .shuttle { margin-top: 16px; padding: 14px 18px; background: var(--purple-soft); border-radius: 3px; font-size: 15px; }
+  .shuttle p { margin: 0; }
+  .shuttle p + p { margin-top: 4px; }
+
+  /* ---------- placeholders (差し替え待ちの箇所) ---------- */
+  .ph { background: var(--ph-bg); color: var(--ph-fg); padding: 0 6px; border-radius: 2px; border-bottom: 1px dashed var(--bordeaux); }
+
+  /* ---------- closing ---------- */
+  .closing { padding-block: 44px 64px; text-align: center; }
+  .closing .orn { color: var(--gold); max-width: 240px; margin: 0 auto 24px; }
+  .closing p { margin: 0 0 10px; }
+  .closing .sign { font-family: var(--font-jp-display); font-weight: 600; font-size: 19px; letter-spacing: 0.14em; margin-top: 26px; }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Wedding Celebration</p>
+    <h1>結婚式・披露宴のご案内</h1>
+    <div class="orn" aria-hidden="true"><i></i></div>
+    <p class="day">2026年10月25日（日）</p>
+    <ul class="hero-times">
+      <li><span class="k">Ceremony</span><span class="v num">14:00</span></li>
+      <li><span class="k">Reception</span><span class="v num">15:15</span></li>
+    </ul>
+    <p class="venue"><strong>ザ・プリンスパークタワー東京</strong>ボールルーム</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="greeting">
+    <p class="lead">ご列席の皆様<br>いよいよ結婚式まで1週間を切りました。</p>
+    <p>お忙しい中ご出席いただけること、本当にうれしく思っています。当日安心してお越しいただけるよう、あらためて要点をまとめました。</p>
+
+    <div class="gather">
+      <p class="label">Gathering</p>
+      <p class="big num">13:40</p>
+      <p class="place">地下2階 ご来賓室</p>
+      <p class="note">ホテルの地下2階に降りると、臼井家・伊藤家ご来賓室の案内があります。</p>
+    </div>
+  </div>
+
+  <section id="place">
+    <p class="sec-en">Date &amp; Venue</p>
+    <h2>日時・場所</h2>
+    <dl class="facts">
+      <dt>日付</dt>
+      <dd>2026年10月25日（日）<br>挙式 <span class="num">14:00</span>〜／披露宴 <span class="num">15:15</span>〜</dd>
+      <dt>会場</dt>
+      <dd>ザ・プリンスパークタワー東京 ボールルーム</dd>
+      <dt>住所</dt>
+      <dd>〒105-8563 東京都港区芝公園4-8-1</dd>
+      <dt>電話</dt>
+      <dd><a class="tel" href="tel:0354001111">03-5400-1111</a></dd>
+    </dl>
+    <div class="btns">
+      <a class="btn primary" href="https://maps.app.goo.gl/LyjcWLynAtXxWiXVA" target="_blank" rel="noopener">地図を開く</a>
+      <a class="btn" href="https://www.princehotels.co.jp/parktower/" target="_blank" rel="noopener">ホテルのサイト</a>
+      <button class="btn" type="button" id="copy-addr" data-copy="〒105-8563 東京都港区芝公園4-8-1 ザ・プリンスパークタワー東京">住所をコピー</button>
+    </div>
+  </section>
+
+  <section id="flow">
+    <p class="sec-en">Schedule</p>
+    <h2>当日の流れ</h2>
+    <ol class="flow">
+      <li class="first">
+        <span class="time num">13:40</span>
+        <div class="flow-body">
+          <h3>集合</h3>
+          <p>地下2階 ご来賓室。臼井家・伊藤家ご来賓室の案内が出ています。</p>
+        </div>
+      </li>
+      <li>
+        <span class="time num">14:00</span>
+        <div class="flow-body">
+          <h3>挙式（森のチャペル）</h3>
+          <p>ご来賓室から、スタッフがチャペルにご案内します。</p>
+        </div>
+      </li>
+      <li>
+        <span class="time num">14:30</span>
+        <div class="flow-body">
+          <h3>受付</h3>
+          <p>地下2階 ご来賓室。</p>
+        </div>
+      </li>
+      <li>
+        <span class="time num">15:15</span>
+        <div class="flow-body">
+          <h3>披露宴</h3>
+          <p>2時間半程度を予定しています。</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="access">
+    <p class="sec-en">Access</p>
+    <h2>アクセス</h2>
+    <ul class="stations">
+      <li><span class="name">赤羽橋駅</span><span class="walk">徒歩<b>2</b>分</span></li>
+      <li><span class="name">芝公園駅</span><span class="walk">徒歩<b>3</b>分</span></li>
+      <li><span class="name">浜松町駅</span><span class="walk">徒歩<b>12</b>分</span></li>
+    </ul>
+    <div class="shuttle">
+      <p>浜松町駅からは無料シャトルバスもあります（平常時約20分）。</p>
+      <p><a href="https://www.princehotels.co.jp/file.jsp?id=520229" target="_blank" rel="noopener">シャトルバスの時刻表を見る</a></p>
+    </div>
+  </section>
+
+  <section id="cloak">
+    <p class="sec-en">Cloakroom &amp; Dressing Room</p>
+    <h2>クローク・更衣室</h2>
+    <dl class="facts">
+      <dt>クローク</dt>
+      <dd>地下2階にございます。お荷物をお預けください。</dd>
+      <dt>更衣室</dt>
+      <dd>地下2階 <span class="ph">「　　　」</span> をご利用いただけます。</dd>
+    </dl>
+  </section>
+
+  <section id="photo">
+    <p class="sec-en">Photos &amp; SNS</p>
+    <h2>写真・SNS</h2>
+    <p>挙式中、披露宴中の写真撮影は歓迎です。</p>
+    <p>撮った写真は、新郎新婦にぜひ送っていただけるとうれしいです。</p>
+  </section>
+
+  <section id="contact">
+    <p class="sec-en">Contact on the Day</p>
+    <h2>当日の連絡先</h2>
+    <p>迷ったり、遅れそうなときは、当日連絡係の <span class="ph">○○</span> までお気軽にご連絡ください。</p>
+    <dl class="facts">
+      <dt>携帯</dt>
+      <dd><span class="tel ph">○○○-○○○○-○○○○</span></dd>
+    </dl>
+  </section>
+
+  <section id="faq">
+    <p class="sec-en">Information</p>
+    <h2>その他</h2>
+    <p>ザ・プリンスパークタワー東京から、ご列席者様へのよくあるご質問集が出ています。</p>
+    <div class="btns">
+      <a class="btn" href="https://www.princehotels.co.jp/parktower/wedding/faq/" target="_blank" rel="noopener">よくあるご質問を見る</a>
+    </div>
+  </section>
+
+  <footer class="closing">
+    <div class="orn" aria-hidden="true"><i></i></div>
+    <p>ご不明点がある際は、お気軽に新郎新婦にご連絡ください。</p>
+    <p>当日はお料理やお酒を楽しみながら、ゆっくり過ごしてもらえたらうれしいです。</p>
+    <p>お会いできるのを楽しみにしています。</p>
+    <p class="sign"><span class="ph">新郎氏名</span>・<span class="ph">新婦氏名</span></p>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-addr');
+    if (!btn) return;
+    var original = btn.textContent;
+    function done(msg) {
+      btn.textContent = msg;
+      setTimeout(function () { btn.textContent = original; }, 1800);
+    }
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      try {
+        navigator.clipboard.writeText(text).then(function () { done('コピーしました'); }, function () { fallback(text); });
+      } catch (e) { fallback(text); }
+    });
+    function fallback(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done(ok ? 'コピーしました' : '長押しでコピーしてください');
+    }
+  })();
+</script>
+
+</body></html>
